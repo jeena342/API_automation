@@ -1,4 +1,4 @@
-### API Automation Testing – REST Assured
+# API Automation Testing – REST Assured
 
 
 ## **Project Overview**
