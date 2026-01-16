@@ -3,10 +3,11 @@ package apibase;
 import java.util.HashMap;
 
 import io.restassured.response.Response;
+import utils.ConfigReader;
 
 
 public class AuthService extends BaseService{
-	private static final String BASE_PATH="/api/auth/";
+	private static final String BASE_PATH=ConfigReader.get("BASE_PATH");;
 	public Response login(Object payload) {
 		return postRequest(payload,BASE_PATH+"login");
 	}

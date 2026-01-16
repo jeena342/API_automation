@@ -1,7 +1,7 @@
 package apibase;
 
 import io.restassured.specification.RequestSpecification;
-
+import utils.ConfigReader;
 
 import static io.restassured.RestAssured.*;
 
@@ -9,7 +9,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response; 
 
 public class BaseService {
-	private static final String BASE_URL="http://64.227.160.186:8080";
+	private static final String BASE_URL= ConfigReader.get("BASE_URL");
+	
 	private RequestSpecification requestSpecification;
 
 	public BaseService() {
